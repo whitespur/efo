@@ -181,8 +181,10 @@ INSERT INTO user(username,real_name,email,password,permission,is_deletable,is_up
 #请确保数据库中始终有“未分类”这个分类，否则系统运行时有可能出错
 INSERT INTO category(name) VALUES("未分类");
 
-DROP USER IF EXISTS 'zhazhapan'@'localhost';
+--DROP USER IF EXISTS 'zhazhapan'@'localhost';
 
-CREATE USER 'zhazhapan'@'localhost' IDENTIFIED BY 'zhazhapan';
+-- CREATE USER 'zhazhapan'@'localhost' IDENTIFIED BY 'zhazhapan';
+CREATE USER 'admin'@'localhost' IDENTIFIED BY 'admin123456';
 
-GRANT INSERT, DELETE, UPDATE, SELECT ON efo.* TO 'zhazhapan'@'localhost';
+-- GRANT INSERT, DELETE, UPDATE, SELECT ON efo.* TO 'zhazhapan'@'localhost';
+GRANT INSERT, DELETE, UPDATE, SELECT ON efo.* TO 'admin'@'localhost';
